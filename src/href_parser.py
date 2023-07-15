@@ -16,5 +16,11 @@ class HrefParser(HTMLParser):
         Only look for <a href="" /> links
         """
 
-        if tag == 'a' and attrs[0] == 'href':
-            self.href_links.push(attrs[1])
+        # Only parse the 'anchor' tag
+        if tag == "a":
+           # Check the list of defined attributes
+           for name, value in attrs:
+               # If href is defined, append it
+               if name == "href":
+                   self.href_links.append(value)
+                   break
