@@ -1,3 +1,7 @@
+"""
+Tests here are for href parsing only, not the full webpage downloads.
+"""
+
 from src.bookmarks_backup import parse_href_links
 
 
