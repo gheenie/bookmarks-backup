@@ -32,3 +32,6 @@ def backup_page(href_links):
             bypass_robots=True,
             open_in_browser=False
         )
+
+        # Logging
+        print(i, url)
