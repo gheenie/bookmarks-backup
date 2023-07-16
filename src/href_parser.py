@@ -6,7 +6,9 @@ from html.parser import HTMLParser
 
 
 class HrefParser(HTMLParser):
-    href_links = []
+    def __init__(self):
+        super().__init__()
+        self.href_links = []
 
     def get_href_links(self):
         return self.href_links
